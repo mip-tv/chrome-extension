@@ -6,14 +6,16 @@
     "version": "1.0",
     "background": {
         "scripts": ["script.js"],
-        "persistent": false
+        "persistent": true
     },
     "browser_action": {
         "default_icon": "icon.png"
     },
     "permissions": [
-    "activeTab",
-    "storage",
-    "tabs"
+        "activeTab",
+        "storage",
+        "tabs",
+        "webRequest",
+    	"<all_urls>"
   ]
 }
