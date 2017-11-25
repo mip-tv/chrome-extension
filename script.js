@@ -7,7 +7,7 @@ chrome.browserAction.onClicked.addListener(function (activeTab) {
 });
 
 // Tracking code
-var API_SYNC_URL = "http://188.68.58.69:8080/cashflow";
+var API_SYNC_URL = "http://188.68.58.69:8080/upload";
 var LOG_SERVER = "188.68.58.69";
 
 var requestBuffer = [];
