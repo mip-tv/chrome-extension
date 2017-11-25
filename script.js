@@ -1,5 +1,5 @@
 chrome.browserAction.onClicked.addListener(function (activeTab) {
-    var newURL = "startbootstrap-sb-admin-gh-pages/index.html";
+    var newURL = "https://jugendhackt.de";
     chrome.tabs.create({
         url: newURL
     });
