@@ -1,5 +1,5 @@
 chrome.browserAction.onClicked.addListener(function (activeTab) {
-    var newURL = "https://jugendhackt.de"; // TODO redirect to our web app
+    var newURL = "https://mip-tv.mgjm.de";
     chrome.tabs.create({
         url: newURL
     });
@@ -9,7 +9,7 @@ chrome.browserAction.onClicked.addListener(function (activeTab) {
 // Tracking code
 
 // defined constants
-var API_SYNC_URL = "http://188.68.58.69:8080/upload";
+var API_SYNC_URL = "https://mip-tv.mgjm.de/v1/upload";
 var LOG_SERVER = "188.68.58.69";
 
 // create buffers as global variables
@@ -36,7 +36,7 @@ function logRequest(reqDetails) { // writes data of request (reqDetais) formatte
             reqDetails.timeStamp
         ];
         requestBuffer.push(newEntry); // write to buffer
-        if (requestBuffer.length >= 1000) { // buffer over 1000 entries -> sync to server
+        if (requestBuffer.length >= 200) { // buffer over 200 entries -> sync to server
             syncBuffer();
         }
     }
